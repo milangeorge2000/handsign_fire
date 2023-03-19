@@ -9,8 +9,8 @@ firebase = firebase.FirebaseApplication('https://hand-sign-27230-default-rtdb.fi
 
 print('Record Updated')
 
-# import pyttsx3
-# engine = pyttsx3.init()
+import pyttsx3
+engine = pyttsx3.init()
 
 
 
@@ -78,8 +78,8 @@ while True:
           
             cv2.putText(frame, label + " " + str(round(confidence, 2)), (x, y + 30), font, 3, color, 3)
             firebase.put('/signal','handsign',label)
-            # engine.say(label)
-            # engine.runAndWait()
+            engine.say(label)
+            engine.runAndWait()
 
 
 
